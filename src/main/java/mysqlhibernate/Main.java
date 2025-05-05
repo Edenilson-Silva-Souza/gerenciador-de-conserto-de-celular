@@ -25,7 +25,8 @@ public class Main {
 			
 			System.out.print("Nome da empresa que trabalha: ");
 			String nomeEmp = input.next();
-			
+
+
 			fun.setEmpresa(nomeEmp);
 			fun.setFunNome(nomeFun);
 			
