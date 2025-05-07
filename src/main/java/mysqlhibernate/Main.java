@@ -98,7 +98,7 @@ public class Main {
 		    System.out.println("cargo: " + user.getCargo());
 		    System.out.println("horas semanais: " + user.getHorasSemanais());
 		    System.out.println("");
-		}
+
 		*/
 		
 		/*
