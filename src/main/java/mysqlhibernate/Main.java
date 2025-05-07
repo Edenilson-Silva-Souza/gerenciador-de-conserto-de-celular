@@ -13,6 +13,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
+<<<<<<< HEAD
 		
 		/*
 		//verificar se um cliente já existe.
@@ -139,6 +140,34 @@ public class Main {
 			central.getSession().close();
 		*/
 		
+=======
+		try {
+			SessionFactory sf = config.buildSessionFactory();
+			Session session = sf.openSession();
+			
+			Funcionario fun = new Funcionario();
+			Scanner input = new Scanner(System.in);
+			
+			System.out.print("Seu nome: ");
+			String nomeFun = input.nextLine();
+			
+			System.out.print("Nome da empresa que trabalha: ");
+			String nomeEmp = input.next();
+
+
+			fun.setEmpresa(nomeEmp);
+			fun.setFunNome(nomeFun);
+			
+			session.beginTransaction();
+			session.persist(fun);
+			session.getTransaction().commit();
+			
+			session.close();
+			
+		}catch(Exception e){
+			
+		}
+>>>>>>> 00a9bbc83cc1c573949ae4a38e5928235d7cd4f8
 	}
 
 }
