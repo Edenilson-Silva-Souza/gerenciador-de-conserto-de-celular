@@ -1,19 +1,30 @@
 package mysqlhibernate;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
-
-import control.Central;
-import model.Cargo;
-import model.Funcionario;
+import view.TelaCliente;
+import view.ListaAparellho;
+import view.ListaCliente;
+import view.ListaFuncionario;
+import view.TelaAparelho;
+import view.TelaFuncionario;
+import view.TelaMain;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-<<<<<<< HEAD
+		//Falta criar a tela para gerenciar as outras telas(Tela padrão).
+		TelaMain app = new TelaMain();
+		
+		
+		//new TelaFuncionario();
+		//new ListaAparellho();
+		//TelaAparelho apare = new TelaAparelho();
+		
+		//TelaCliente app = new TelaCliente();
+		//ListaCliente cli = new ListaCliente();
+		//Cliente c = new Cliente();
+		//ListaFuncionario f = new ListaFuncionario();
+		
 		
 		/*
 		//verificar se um cliente já existe.
@@ -26,6 +37,7 @@ public class Main {
 		*/
 		
 		/*
+		 tela feita
 		//remover cliente
 		Central central = new Central();
 		central.removerCliente();
@@ -87,6 +99,8 @@ public class Main {
 		
 	
 		/*
+		 * 
+		 tela feita
 		//Mostra a lista de entidades do banco de dados
 		Central central = new Central();
 		List<Funcionario> usuarios= central.lista();
@@ -103,7 +117,8 @@ public class Main {
 		*/
 		
 		/*
-		//READ	
+		//READ
+		 //tela feita
 		//ler um dados de um usuário (read)
 		Central central = new Central();
 		Map mapa = central.ler();
@@ -119,6 +134,7 @@ public class Main {
 		
 		/*
 		//DELETE
+		//tela feita
 		//remover uma linha da tabela
 		Central central = new Central();
 		central.remover(3);
@@ -126,6 +142,7 @@ public class Main {
 		*/
 		
 		/*
+		//tela feita
 		//UPDATE
 		Central central = new Central();
 		central.updateCadastro();
@@ -134,40 +151,14 @@ public class Main {
 				
 		
 		/*
+		 //tela feita
 		 //CREATE	
 			Central central = new Central();
 			central.cadastrar();
 			central.getSession().close();
 		*/
 		
-=======
-		try {
-			SessionFactory sf = config.buildSessionFactory();
-			Session session = sf.openSession();
-			
-			Funcionario fun = new Funcionario();
-			Scanner input = new Scanner(System.in);
-			
-			System.out.print("Seu nome: ");
-			String nomeFun = input.nextLine();
-			
-			System.out.print("Nome da empresa que trabalha: ");
-			String nomeEmp = input.next();
 
-
-			fun.setEmpresa(nomeEmp);
-			fun.setFunNome(nomeFun);
-			
-			session.beginTransaction();
-			session.persist(fun);
-			session.getTransaction().commit();
-			
-			session.close();
-			
-		}catch(Exception e){
-			
-		}
->>>>>>> 00a9bbc83cc1c573949ae4a38e5928235d7cd4f8
 	}
 
 }

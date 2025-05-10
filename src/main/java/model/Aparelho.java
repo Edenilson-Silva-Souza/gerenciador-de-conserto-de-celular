@@ -55,5 +55,12 @@ public class Aparelho {
 	public Aparelho() {
 		super();
 	}
-
+	
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+	
+	public Cliente getCliente() {
+		return cliente;
+	}
 }
